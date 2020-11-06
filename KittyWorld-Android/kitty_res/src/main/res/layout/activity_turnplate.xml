@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/activity_turnplate_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_191"
+                    android:layout_marginStart="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_130"
+                    android:layout_marginEnd="@dimen/dp_48"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/activity_turnpalte_little_back"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_turnplate_coupon_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/turnpalte_coupon_icon"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:text="@string/turnplate_coupon_count"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/sp_17"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_default_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:text="@string/turnpalte_coupon_tip"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginStart="@dimen/dp_47"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_47"
+                    android:layout_marginBottom="@dimen/dp_26"
+                    android:background="@drawable/activity_repertory_draw"
+                    android:gravity="center"
+                    android:text="@string/start_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_turn_plate_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_38"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/white_close_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_rotateview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp">
+
+            <com.kitty.kitty_base.views.rotate.RotateLayoutView
+                android:id="@+id/rv_rotateview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rotate_back_shadow"
+                android:outlineProvider="background" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_get_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rl_rotateview"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_34"
+
+            android:background="@drawable/shape_turnplate_get_coupon"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_8"
+            android:text="@string/turnplate_get_coupon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="SpUsage" />
+    </RelativeLayout>
+
+</RelativeLayout>

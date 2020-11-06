@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="ResourceName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/activity_level_bonus_back"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_301"
+                android:layout_height="@dimen/dp_301"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dp_17"
+                android:background="@drawable/luck_turn_big_back">
+
+                <com.kitty.kitty_base.views.special_luck_panel.SpecialLuckyMonkeyPanelView
+                    android:id="@+id/lucky_panel"
+                    android:layout_width="@dimen/dp_274"
+                    android:layout_height="@dimen/dp_274"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/luck_turn_back" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/lucky_turn_center"
+                    android:gravity="center"
+                    android:text="@string/special_lucky_turn_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_24"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:background="@drawable/level_bonus_star_back"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16"
+                android:text="@string/start_merge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_turn_plate_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_38"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/white_close_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

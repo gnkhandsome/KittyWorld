@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/activity_dialog_back"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/dp_22"
+                    android:text="@string/system_message"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/close_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_22"
+                    android:paddingRight="@dimen/dp_20"
+                    android:src="@drawable/gray_close_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:gravity="left"
+                android:text="@string/verise_content"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_collection_friends"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:layout_marginBottom="@dimen/dp_36"
+                android:background="@drawable/activity_repertory_draw"
+                android:gravity="center"
+                android:text="@string/collect_friend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

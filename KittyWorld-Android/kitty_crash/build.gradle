@@ -1,0 +1,10 @@
+apply from: "../module.build.gradle"
+
+android {
+    resourcePrefix "kitty_crash_"
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':kitty_res')
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_adventure_gain"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70" />
+
+    <TextView
+        android:id="@+id/tv_adventure_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:paddingLeft="@dimen/dp_3"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingRight="@dimen/dp_3"
+        android:paddingBottom="@dimen/dp_2"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+</FrameLayout>

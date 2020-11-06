@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="oval"
+    android:useLevel="false"
+    tools:ignore="ResourceName">
+
+<!--    &lt;!&ndash; 实心 &ndash;&gt;-->
+    <solid android:color="#ff6e6e6e" />
+    <!-- 圆角 -->
+    <corners android:radius="360dp" />
+    <!-- 边距 -->
+    <padding
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp" />
+<!--    <gradient android:type="linear" android:useLevel="true" android:startColor="#ff6e6e6e" android:endColor="#ffc6c6c6" android:angle="350" />-->
+
+</shape>
+

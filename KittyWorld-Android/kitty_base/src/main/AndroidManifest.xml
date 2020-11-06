@@ -1,0 +1,123 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kitty.kitty_base">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 如果有视频相关的广告且使用textureView播放，请务必添加，否则黑屏 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application>
+        <activity
+            android:name=".base.WebViewActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".BannerActivity"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".BannerExpressActivity"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.SocialInfoActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.LevelBonusDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.FloatActivity.Translucent" />
+
+        <activity
+            android:name=".ui.SpecialLevelBonusDialog"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.FloatActivity.Translucent" />
+
+        <activity
+            android:name=".ui.FortuneKittyProfitActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.MergeDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.FloatActivity.Translucent" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.MessageCenterActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.AssetCenterActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.WithdrawSuccessActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.MyFortuneKittyActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.MainActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.SettingActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.PrivcyActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.MineQrCodeActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.BindAlPayActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.AboutUsActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.kitty.kitty_base.ui.MyInviteCodeAcivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashFullScreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kitty.com"
+                    android:scheme="kittyworld" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" />
+    </application>
+</manifest>

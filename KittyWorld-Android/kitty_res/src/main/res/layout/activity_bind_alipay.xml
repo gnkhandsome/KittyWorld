@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_fff4f4f4"
+    tools:ignore="ResourceName">
+
+    <include layout="@layout/title_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_draw_author"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_23"
+        android:paddingRight="@dimen/dp_23">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_40"
+            android:src="@drawable/alipay_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:text="@string/bind_alipay_author_text"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/alipay_author_tip_one"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/alipay_author_tip_two"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_author_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="@dimen/dp_95"
+            android:background="@drawable/log_out_btn_back"
+            android:gravity="center"
+            android:text="@string/alipay_author"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_authored"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dp_100"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/draw_author_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:gravity="center"
+            android:textSize="@dimen/sp_18"
+            android:layout_marginTop="@dimen/dp_25"
+            android:text="@string/drawback_author"/>
+
+    </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

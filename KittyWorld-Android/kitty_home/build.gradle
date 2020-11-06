@@ -1,0 +1,15 @@
+apply from: "../module.build.gradle"
+
+android {
+    resourcePrefix "kitty_home_"
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':kitty_base')
+    implementation project(':kitty_res')
+}

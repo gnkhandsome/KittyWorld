@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="ResourceName">
+
+<FrameLayout
+    android:layout_width="54dp"
+    android:layout_height="54dp"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_cat_icon"
+        android:layout_width="54dp"
+        android:background="@drawable/adventure_gain_item_back"
+        android:layout_height="54dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_item_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_4"
+        android:layout_gravity="bottom|right"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+</FrameLayout>
+</LinearLayout>

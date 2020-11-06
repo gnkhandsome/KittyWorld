@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,ResourceName">
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation" >发生意外错误。\n抱歉，给您带来不便。</string>
+    <string name="customactivityoncrash_error_activity_restart_app" tools:ignore="MissingTranslation">重新启动</string>
+    <string name="customactivityoncrash_error_activity_close_app" tools:ignore="MissingTranslation">关闭程序</string>
+    <string name="customactivityoncrash_error_activity_error_details" tools:ignore="MissingTranslation">错误日志</string>
+    <string name="customactivityoncrash_error_activity_error_details_title" tools:ignore="MissingTranslation">错误详情</string>
+    <string name="customactivityoncrash_error_activity_error_details_close" tools:ignore="MissingTranslation">关闭</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy" tools:ignore="MissingTranslation">复制日志</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied" tools:ignore="MissingTranslation">复制日志</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label" tools:ignore="MissingTranslation">错误信息</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kitty.kitty_base.views.DragFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/drag_size"
+    android:layout_height="@dimen/drag_size"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_cat_icon"
+        android:layout_width="@dimen/drag_size"
+        android:layout_height="@dimen/drag_size"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp_8" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view_merge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_item_level"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/kitty_timer_back"
+        android:drawableLeft="@drawable/kitty_timer_icon"
+        android:drawablePadding="@dimen/dp_4"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingTop="1dp"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingBottom="1dp"
+        android:text="0:00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/ll_drag_view_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/iv_item_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_item_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FFFF4B5D"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</com.kitty.kitty_base.views.DragFrameLayout>

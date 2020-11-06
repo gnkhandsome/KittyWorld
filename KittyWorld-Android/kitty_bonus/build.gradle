@@ -1,0 +1,11 @@
+apply from: "../module.build.gradle"
+
+android {
+    resourcePrefix "kitty_bonus_"
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':kitty_base')
+    implementation project(':kitty_res')
+}

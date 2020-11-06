@@ -1,0 +1,11 @@
+apply from: "../module.build.gradle"
+
+
+android {
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':kitty_res')
+    api 'org.java-websocket:Java-WebSocket:1.4.1'
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <RelativeLayout
+        android:id="@+id/rl_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/map_gift_back"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColor="@color/color_9B9B9B"
+                android:textSize="@dimen/dp_11" />
+
+            <TextView
+                android:id="@+id/tv_gift_receive_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/map_gift_receive"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:text="@string/receive"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_10"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_map_gift_icon"
+            android:layout_width="@dimen/dp_38"
+            android:layout_height="@dimen/dp_38"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_locked"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/map_gift_back"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:src="@drawable/gift_lock_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_received"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/map_gift_back"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_gift_received_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="@dimen/dp_11"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gift_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:text="@string/received"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="@dimen/dp_11"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</FrameLayout>

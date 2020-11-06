@@ -1,0 +1,2 @@
+include ':app', ':kitty_base', ':kitty_res', ':kitty_home', ':kittty_travel', ':kitty_bonus', ':kitty_mine', ':websocketlib', ':kitty_crash', ':kitty_ads'
+rootProject.name = 'KittyWorld-Android'

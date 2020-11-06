@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/activity_dialog_back"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/close_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:src="@drawable/gray_close_icon" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_170"
+            android:layout_height="@dimen/dp_140">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_9"
+                android:background="@drawable/experice_back"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_4"
+                android:paddingRight="@dimen/dp_4"
+                android:text="@string/experice_text"
+                android:textColor="@color/color_FF5E6E"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_140"
+                android:layout_height="@dimen/dp_140"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_kitty_level45" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_kitty_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_14"
+            android:drawableLeft="@drawable/timer_icon"
+            android:drawablePadding="@dimen/dp_2"
+            android:gravity="center_horizontal"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_14" />
+
+
+        <TextView
+            android:id="@+id/tv_reward_kitty_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_dividing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_48"
+            android:background="@drawable/time_kitty_dividing_back"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_current_divided_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="0.00元"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_17"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:text="@string/dividing"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dp_14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/to_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_35"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+</RelativeLayout>

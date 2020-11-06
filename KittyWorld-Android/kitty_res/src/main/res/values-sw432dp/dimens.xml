@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
+    <item name="anim_man_ratio" format="float" type="dimen" tools:ignore="MissingDefaultResource">
+        0.30
+    </item>
+    <dimen name="home_adventure_top" tools:ignore="MissingDefaultResource">40dp</dimen>
+    <dimen name="home_fortune_margin" tools:ignore="MissingDefaultResource">12dp</dimen>
+</resources>

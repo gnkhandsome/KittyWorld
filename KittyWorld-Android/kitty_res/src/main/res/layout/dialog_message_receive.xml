@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/activity_dialog_back"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/close_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/dp_20"
+            android:src="@drawable/gray_close_icon" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_type_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hour_bonus_icon" />
+
+                <TextView
+                    android:id="@+id/tv_kitty_level"
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:background="@drawable/level_back"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_reward_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_34"
+                android:layout_marginRight="@dimen/dp_34"
+                android:layout_marginTop="@dimen/dp_24"
+                android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_to_receive"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginStart="@dimen/dp_47"
+            android:layout_marginTop="@dimen/dp_45"
+            android:layout_marginEnd="@dimen/dp_47"
+            android:layout_marginBottom="@dimen/dp_45"
+            android:background="@drawable/activity_repertory_draw"
+            android:gravity="center"
+            android:text="@string/click_to_receive"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+</RelativeLayout>

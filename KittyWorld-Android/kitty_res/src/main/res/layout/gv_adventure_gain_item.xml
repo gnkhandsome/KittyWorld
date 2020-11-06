@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <FrameLayout
+        android:layout_width="@dimen/dp_43"
+        android:layout_height="@dimen/dp_43"
+        tools:ignore="ResourceName">
+
+        <ImageView
+            android:id="@+id/iv_adventure_gain"
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_43"
+            android:layout_gravity="center"
+            android:background="@drawable/adventure_gain_item_back" />
+
+        <TextView
+            android:id="@+id/tv_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:paddingStart="@dimen/dp_2"
+            android:paddingEnd="@dimen/dp_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_bonus_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp_12"
+        android:textColor="@color/color_FFF5A623"
+        android:textSize="@dimen/sp_10"
+        />
+</LinearLayout>

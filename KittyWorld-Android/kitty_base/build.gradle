@@ -1,0 +1,184 @@
+apply from: "../module.build.gradle"
+apply plugin: 'com.google.protobuf'
+
+android {
+    resourcePrefix "kitty_base_"
+    defaultConfig {
+        ndk { abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'armeabi' }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+//            buildConfigField 'boolean', 'IS_TEST_ENV', 'false'
+//            buildConfigField 'String', 'API_BASE', '"http://kitty.dev.cocosbcx.net/api/"'
+            //正式环境
+//            buildConfigField 'String', 'WX_URL', '"https://kittyworld.cn/api/api/v1/"'
+//            buildConfigField 'String', 'WS_URL', '"wss://kittyworld.cn/ws/game/login"'
+//            buildConfigField 'String', 'INVITE_URL', '"https://kittyworld.cn/invite/wechat?user_id="'
+
+//            buildConfigField 'String', 'WX_URL', '"http://kitty.dev.cocosbcx.net/api/api/v1/"'
+//            buildConfigField 'String', 'WS_URL', '"ws://kitty.dev.cocosbcx.net/ws/game/login"'
+//            buildConfigField 'String', 'INVITE_URL', '"http://kitty.dev.cocosbcx.net/invite/wechat?user_id="'
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+//            buildConfigField 'boolean', 'IS_TEST_ENV', 'true'
+//            buildConfigField 'String', 'API_BASE', '"http://kitty.dev.cocosbcx.net/api/"'
+////
+//            buildConfigField 'String', 'WX_URL', '"http://kitty.dev.cocosbcx.net/api/api/v1/"'
+//            buildConfigField 'String', 'WS_URL', '"ws://kitty.dev.cocosbcx.net/ws/game/login"'
+//            buildConfigField 'String', 'INVITE_URL', '"http://kitty.dev.cocosbcx.net/invite/wechat?user_id="'
+
+//            buildConfigField 'String', 'WX_URL', '"https://kittyworld.cn/api/api/v1/"'
+//            buildConfigField 'String', 'WS_URL', '"wss://kittyworld.cn/ws/game/login"'
+//            buildConfigField 'String', 'INVITE_URL', '"https://kittyworld.cn/invite/wechat?user_id="'
+
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    sourceSets {
+        main {
+            proto {
+
+                srcDir PROTO_FILE_DIR
+            }
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+        }
+    }
+}
+
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.9.1'
+    }
+
+    plugins {
+        // Locate a plugin with name 'grpc'. This step is optional.
+        // If you don't locate it, protoc will try to use "protoc-gen-grpc" from
+        // system search path.
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.0.0-pre2'
+        }
+        javalite {
+            // The codegen for lite comes as a separate artifact
+            artifact = 'com.google.protobuf:protoc-gen-javalite:3.9.1'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                java {
+                    option "lite"
+                }
+            }
+        }
+    }
+    //生成在base moudle
+    generatedFilesBaseDir = "$rootDir/kitty_base/src/generated"
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    google()
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    api project(path: ':kitty_res')
+    api project(path: ':websocketlib')
+    api project(path: ':kitty_crash')
+    api project(path: ':kitty_ads')
+
+    //support
+    api rootProject.ext.support["support-v4"]
+    api rootProject.ext.support["appcompat-v7"]
+    api rootProject.ext.support["recyclerview-v7"]
+    api rootProject.ext.support["design"]
+    api rootProject.ext.support["constraint-layout"]
+    //ARouter
+    api rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-annotationProcessor"]
+    // event bus
+    api 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor rootProject.ext.dependencies["arouter-annotationProcessor"]
+    // butter knife
+    api 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    //lombok
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+    annotationProcessor "org.projectlombok:lombok:1.18.2"
+    // 适配框架
+    api 'me.jessyan:autosize:1.1.2'
+    // lottie
+    api 'com.airbnb.android:lottie:3.4.0'
+    // protobuf
+    api 'com.google.protobuf:protobuf-javalite:3.11.4'
+
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //微信SDK
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.rxandroid
+    api rootProject.ext.dependencies.logging
+    //状态栏管理
+    api rootProject.ext.dependencies.immersionbar
+
+    //rxjava
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.rxandroid
+    api 'com.jakewharton.rxrelay2:rxrelay:2.1.0'
+    //rx管理View的生命周期
+    api(rootProject.ext.dependencies.rxlifecycle) {
+        exclude group: 'com.android.support'
+    }
+    api(rootProject.ext.dependencies["rxlifecycle-components"]) {
+        exclude group: 'com.android.support'
+    }
+    //rxbinding
+    api(rootProject.ext.dependencies.rxbinding) {
+        exclude group: 'com.android.support'
+    }
+    //rx权限请求
+    api(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    // js bright
+    api 'com.github.lzyzsd:jsbridge:1.0.4'
+
+    // zxing
+    api 'com.google.zxing:core:3.3.3'
+
+    api 'com.alibaba:fastjson:1.2.48'
+
+    api 'me.jessyan:autosize:1.2.1'
+
+//    api 'com.dalong:marqueeview:1.0.1'
+
+    api 'com.github.zrunker:ZTextView:v1.0.2'
+
+
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
+
+    api 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+
+}

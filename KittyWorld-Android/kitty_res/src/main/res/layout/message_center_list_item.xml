@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/travel_content_board"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_18"
+    android:paddingBottom="@dimen/dp_18"
+    tools:ignore="ResourceName">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_message_type_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/message_mail_icon"/>
+
+        <ImageView
+            android:id="@+id/iv_read_status"
+            android:layout_width="@dimen/dp_8"
+            android:layout_gravity="right"
+            android:layout_height="@dimen/dp_8"
+            android:src="@drawable/unread_point_shape"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/message_op_title"
+            android:layout_width="wrap_content"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/color_9B9B9B"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+</LinearLayout>

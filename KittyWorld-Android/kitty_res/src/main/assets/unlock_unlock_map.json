@@ -1,0 +1,37 @@
+{
+  "level_wheel": {
+    "Id": "level_wheel",
+    "unlock_level": 5,
+    "desc": "升级大转盘"
+  },
+  "online_reward": {
+    "Id": "online_reward",
+    "unlock_level": 6,
+    "desc": "在线奖励"
+  },
+  "tasks": {
+    "Id": "tasks",
+    "unlock_level": 10,
+    "desc": "任务宝箱"
+  },
+  "luck_wheel": {
+    "Id": "luck_wheel",
+    "unlock_level": 8,
+    "desc": "转盘"
+  },
+  "map": {
+    "Id": "map",
+    "unlock_level": 9,
+    "desc": "地图，关卡"
+  },
+  "building": {
+    "Id": "building",
+    "unlock_level": 25,
+    "desc": "盖楼"
+  },
+  "adventure": {
+    "Id": "adventure",
+    "unlock_level": 33,
+    "desc": "探险"
+  }
+}

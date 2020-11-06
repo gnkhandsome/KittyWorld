@@ -1,0 +1,26 @@
+{
+  "10": {
+    "id": 1,
+    "level": 10,
+    "number": 1,
+    "reward": "[{\"type\":5,\"amount\":3600}]"
+  },
+  "17": {
+    "id": 2,
+    "level": 17,
+    "number": 3,
+    "reward": "[{\"type\":5,\"amount\":1800}]"
+  },
+  "23": {
+    "id": 3,
+    "level": 23,
+    "number": 7,
+    "reward": "[{\"type\":5,\"amount\":1800}]"
+  },
+  "37": {
+    "id": 4,
+    "level": 37,
+    "number": 25,
+    "reward": "[{\"type\":5,\"amount\":10800}]"
+  }
+}
